@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">UltimateQuizApp</string>
+    <string name="app_name">AwesomeQuizApp</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -10,7 +10,11 @@
     <string name="title_activity_final_result">FinalResult</string>
     <string name="final_result_text">Congratulations! You have got
         <xliff:g id="count" example="2">%d</xliff:g>
-        answers correct out of 10. Great work!
+        answers correct out of 12. Great work!
     </string>
     <string name="completion_msg">Quiz is complete!Click on Submit to view results</string>
+    <string name="earth">Earth</string>
+    <string name="sun">Sun</string>
+    <string name="jupiter">Jupiter</string>
+    <string name="venus">Venus</string>
 </resources>

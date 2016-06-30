@@ -3,24 +3,126 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/question_text"
+<!--ViewFlipper to switch between different views depending on whether answer is multiple choice(checkbox) or radio buttons or text input -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:fontFamily="sans-serif-light"
-        android:textColor="#212121"
-        style="@style/quiz_style"/>
-    <EditText
-        android:id="@+id/answer_text"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_weight="1"
-        android:hint="@string/hint"
-        android:gravity="top"
-        android:textColor="#3F51B5"
-        style="@style/quiz_style"/>
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/question_text_singleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/Grey"
+                style="@style/quiz_style"/>
+            <EditText
+                android:id="@+id/answer_text_singleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:hint="@string/hint"
+                android:gravity="top"
+                android:textColor="@color/Indigo"
+                style="@style/quiz_style"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/question_text_multiChoice"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/Grey"
+                style="@style/quiz_style"/>
+            <LinearLayout
+                android:id="@+id/multi_answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/earth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/earth"
+                    style="@style/Multiple_answer_style"/>
+                <CheckBox
+                    android:id="@+id/sun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sun"
+                    style="@style/Multiple_answer_style"/>
+                <CheckBox
+                    android:id="@+id/venus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/venus"
+                    style="@style/Multiple_answer_style"/>
+                <CheckBox
+                    android:id="@+id/jupiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jupiter"
+                    style="@style/Multiple_answer_style"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/question_text_singleChoiceRadio"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/Grey"
+                android:visibility="visible"
+                style="@style/quiz_style"/>
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    style="@style/Multiple_answer_style"/>
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    style="@style/Multiple_answer_style"/>
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    style="@style/Multiple_answer_style"/>
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    style="@style/Multiple_answer_style"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ViewFlipper>
+
     <TextView
         android:id="@+id/tracker"
         android:layout_width="wrap_content"
