@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#212121"
+        style="@style/quiz_style"/>
+    <EditText
+        android:id="@+id/answer_text"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:hint="@string/hint"
+        android:gravity="top"
+        android:textColor="#3F51B5"
+        style="@style/quiz_style"/>
+    <TextView
+        android:id="@+id/tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"/>
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="next"/>
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="submit"
+        android:visibility="invisible"/>
+
+
+</LinearLayout>
